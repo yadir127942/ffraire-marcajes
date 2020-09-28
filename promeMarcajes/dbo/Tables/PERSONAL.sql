@@ -1,0 +1,25 @@
+﻿CREATE TABLE [dbo].[PERSONAL] (
+    [clave_emp]  NVARCHAR (5)   CONSTRAINT [DF_PERSONAL_clave_emp] DEFAULT ('') NOT NULL,
+    [appater]    NVARCHAR (40)  CONSTRAINT [DF_PERSONAL_appater] DEFAULT ('') NOT NULL,
+    [apmater]    NVARCHAR (40)  CONSTRAINT [DF_PERSONAL_apmater] DEFAULT ('') NOT NULL,
+    [primnom]    NVARCHAR (40)  CONSTRAINT [DF_PERSONAL_primnom] DEFAULT ('') NOT NULL,
+    [segnom]     NVARCHAR (40)  CONSTRAINT [DF_PERSONAL_segnom] DEFAULT ('') NOT NULL,
+    [fecha_ing]  DATE           CONSTRAINT [DF_PERSONAL_fecha_ing] DEFAULT ('2050-12-31') NOT NULL,
+    [fecha_baja] DATE           CONSTRAINT [DF_PERSONAL_fecha_baja] DEFAULT ('2050-12-31') NOT NULL,
+    [puesto]     NVARCHAR (8)   CONSTRAINT [DF_PERSONAL_puesto] DEFAULT ('') NOT NULL,
+    [grado_niv]  INT            CONSTRAINT [DF_PERSONAL_grado_niv] DEFAULT ((0)) NOT NULL,
+    [depto]      NVARCHAR (6)   CONSTRAINT [DF_PERSONAL_depto] DEFAULT ('') NOT NULL,
+    [categoria]  NVARCHAR (2)   CONSTRAINT [DF_PERSONAL_categoria] DEFAULT ('') NOT NULL,
+    [turno]      NVARCHAR (2)   CONSTRAINT [DF_PERSONAL_turno] DEFAULT ('') NOT NULL,
+    [supervisor] NVARCHAR (5)   CONSTRAINT [DF_PERSONAL_supervisor] DEFAULT ('') NOT NULL,
+    [sdo_diario] NUMERIC (9, 2) CONSTRAINT [DF_PERSONAL_sdo_diario] DEFAULT ((0)) NOT NULL,
+    [sdo_integ]  NUMERIC (9, 2) CONSTRAINT [DF_PERSONAL_sdo_integ] DEFAULT ((0)) NOT NULL,
+    [planta]     INT            CONSTRAINT [DF_PERSONAL_planta] DEFAULT ((0)) NOT NULL,
+    [fec_planta] DATE           CONSTRAINT [DF_PERSONAL_fec_planta] DEFAULT ('2050-12-31') NOT NULL,
+    [cve_pago]   NVARCHAR (2)   CONSTRAINT [DF_PERSONAL_cve_pago] DEFAULT ('') NOT NULL,
+    [fec_nacim]  DATE           CONSTRAINT [DF_PERSONAL_fec_nacim] DEFAULT ('2050-12-31') NOT NULL,
+    [wturno]     NVARCHAR (1)   CONSTRAINT [DF_PERSONAL_wturno] DEFAULT ('') NOT NULL,
+    [clase_per]  NVARCHAR (1)   CONSTRAINT [DF_PERSONAL_clase_per] DEFAULT ('') NOT NULL,
+    [cont_div]   NVARCHAR (6)   CONSTRAINT [DF_PERSONAL_cont_div] DEFAULT ('') NOT NULL
+);
+

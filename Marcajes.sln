@@ -5,6 +5,8 @@ VisualStudioVersion = 16.0.30517.126
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Marcajes", "Marcajes\Marcajes.csproj", "{A2DC6665-47C6-4BA8-A9B6-241A1C7DACA9}"
 EndProject
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "promeMarcajes", "promeMarcajes\promeMarcajes.sqlproj", "{114A1BE0-DBA8-47C2-B38D-EAB30709E900}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,12 @@ Global
 		{A2DC6665-47C6-4BA8-A9B6-241A1C7DACA9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A2DC6665-47C6-4BA8-A9B6-241A1C7DACA9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A2DC6665-47C6-4BA8-A9B6-241A1C7DACA9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{114A1BE0-DBA8-47C2-B38D-EAB30709E900}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{114A1BE0-DBA8-47C2-B38D-EAB30709E900}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{114A1BE0-DBA8-47C2-B38D-EAB30709E900}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{114A1BE0-DBA8-47C2-B38D-EAB30709E900}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{114A1BE0-DBA8-47C2-B38D-EAB30709E900}.Release|Any CPU.Build.0 = Release|Any CPU
+		{114A1BE0-DBA8-47C2-B38D-EAB30709E900}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

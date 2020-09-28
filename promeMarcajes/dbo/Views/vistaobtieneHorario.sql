@@ -1,0 +1,71 @@
+﻿
+CREATE VIEW [dbo].[vistaobtieneHorario]
+AS
+	SELECT horario
+				 , lunes
+				 , CASE 
+								WHEN RTRIM(LTRIM(lunes)) <> '' THEN ROUND(DATEPART(HOUR, CONVERT(DATETIME,SUBSTRING(RTRIM(LTRIM(lunes)),0,6)) ) + (DATEPART(MINUTE, CONVERT(DATETIME,SUBSTRING(RTRIM(LTRIM(lunes)),0,6)) )* 1.66667) / 100.00 ,2)  
+								ELSE '-1' 
+					 END AS lunesEntrada
+				 , CASE 
+								WHEN RTRIM(LTRIM(lunes)) <> '' THEN ROUND(DATEPART(HOUR, CONVERT(DATETIME,SUBSTRING(RTRIM(LTRIM(lunes)),6,6)) ) + (DATEPART(MINUTE, CONVERT(DATETIME,SUBSTRING(RTRIM(LTRIM(lunes)),6,6)) )* 1.66667) / 100.00 ,2)  
+								ELSE '-1'
+					 END AS lunesSalida
+				 , martes
+				 , CASE 
+								WHEN RTRIM(LTRIM(martes)) <> '' THEN ROUND(DATEPART(HOUR, CONVERT(DATETIME,SUBSTRING(RTRIM(LTRIM(martes)),0,6)) ) + (DATEPART(MINUTE, CONVERT(DATETIME,SUBSTRING(RTRIM(LTRIM(martes)),0,6)) )* 1.66667) / 100.00 ,2)  
+								ELSE '-1' 
+					 END AS martesEntrada
+				 , CASE 
+								WHEN RTRIM(LTRIM(martes)) <> '' THEN ROUND(DATEPART(HOUR, CONVERT(DATETIME,SUBSTRING(RTRIM(LTRIM(martes)),6,6)) ) + (DATEPART(MINUTE, CONVERT(DATETIME,SUBSTRING(RTRIM(LTRIM(martes)),6,6)) )* 1.66667) / 100.00 ,2)  
+								ELSE '-1'
+					 END AS martesSalida
+				 , miercoles 
+				 , CASE 
+								WHEN RTRIM(LTRIM(miercoles)) <> '' THEN ROUND(DATEPART(HOUR, CONVERT(DATETIME,SUBSTRING(RTRIM(LTRIM(miercoles)),0,6)) ) + (DATEPART(MINUTE, CONVERT(DATETIME,SUBSTRING(RTRIM(LTRIM(miercoles)),0,6)) )* 1.66667) / 100.00 ,2)  
+								ELSE '-1'
+					 END AS miercolesEntrada
+				 , CASE 
+								WHEN RTRIM(LTRIM(miercoles)) <> '' THEN ROUND(DATEPART(HOUR, CONVERT(DATETIME,SUBSTRING(RTRIM(LTRIM(miercoles)),6,6)) ) + (DATEPART(MINUTE, CONVERT(DATETIME,SUBSTRING(RTRIM(LTRIM(miercoles)),6,6)) )* 1.66667) / 100.00 ,2)  
+								ELSE '-1'
+					 END AS miercolesSalida
+				 , jueves                
+				 , CASE 
+								WHEN RTRIM(LTRIM(jueves)) <> '' THEN ROUND(DATEPART(HOUR, CONVERT(DATETIME,SUBSTRING(RTRIM(LTRIM(jueves)),0,6)) ) + (DATEPART(MINUTE, CONVERT(DATETIME,SUBSTRING(RTRIM(LTRIM(jueves)),0,6)) )* 1.66667) / 100.00 ,2)  
+								ELSE '-1'
+					 END AS juevesEntrada
+				 , CASE 
+								WHEN RTRIM(LTRIM(jueves)) <> '' THEN ROUND(DATEPART(HOUR, CONVERT(DATETIME,SUBSTRING(RTRIM(LTRIM(jueves)),6,6)) ) + (DATEPART(MINUTE, CONVERT(DATETIME,SUBSTRING(RTRIM(LTRIM(jueves)),6,6)) )* 1.66667) / 100.00 ,2)  
+								ELSE '-1'
+					 END AS juevesSalida
+				 , viernes 
+				 , CASE 
+								WHEN RTRIM(LTRIM(viernes)) <> '' THEN ROUND(DATEPART(HOUR, CONVERT(DATETIME,SUBSTRING(RTRIM(LTRIM(viernes)),0,6)) ) + (DATEPART(MINUTE, CONVERT(DATETIME,SUBSTRING(RTRIM(LTRIM(viernes)),0,6)) )* 1.66667) / 100.00 ,2)  
+								ELSE '-1'
+					 END AS viernesEntrada
+				 , CASE 
+								WHEN RTRIM(LTRIM(viernes)) <> '' THEN ROUND(DATEPART(HOUR, CONVERT(DATETIME,SUBSTRING(RTRIM(LTRIM(viernes)),6,6)) ) + (DATEPART(MINUTE, CONVERT(DATETIME,SUBSTRING(RTRIM(LTRIM(viernes)),6,6)) )* 1.66667) / 100.00 ,2)  
+								ELSE '-1'
+					 END AS viernesSalida
+				 , sabado 
+				 , CASE 
+								WHEN RTRIM(LTRIM(sabado)) <> '' THEN ROUND(DATEPART(HOUR, CONVERT(DATETIME,SUBSTRING(RTRIM(LTRIM(sabado)),0,6)) ) + (DATEPART(MINUTE, CONVERT(DATETIME,SUBSTRING(RTRIM(LTRIM(sabado)),0,6)) )* 1.66667) / 100.00 ,2)  
+								ELSE '-1'
+					 END AS sabadoEntrada
+				 , CASE 
+								WHEN RTRIM(LTRIM(sabado)) <> '' THEN ROUND(DATEPART(HOUR, CONVERT(DATETIME,SUBSTRING(RTRIM(LTRIM(sabado)),6,6)) ) + (DATEPART(MINUTE, CONVERT(DATETIME,SUBSTRING(RTRIM(LTRIM(sabado)),6,6)) )* 1.66667) / 100.00 ,2)  
+								ELSE '-1'
+					 END AS sabadoSalida
+				 , domingo  
+				 , CASE 
+								WHEN RTRIM(LTRIM(domingo)) <> '' THEN ROUND(DATEPART(HOUR, CONVERT(DATETIME,SUBSTRING(RTRIM(LTRIM(domingo)),0,6)) ) + (DATEPART(MINUTE, CONVERT(DATETIME,SUBSTRING(RTRIM(LTRIM(domingo)),0,6)) )* 1.66667) / 100.00 ,2)  
+								ELSE '-1' 
+					 END AS domingoEntrada
+				 , CASE 
+								WHEN RTRIM(LTRIM(domingo)) <> '' THEN ROUND(DATEPART(HOUR, CONVERT(DATETIME,SUBSTRING(RTRIM(LTRIM(domingo)),6,6)) ) + (DATEPART(MINUTE, CONVERT(DATETIME,SUBSTRING(RTRIM(LTRIM(domingo)),6,6)) )* 1.66667) / 100.00 ,2)  
+								ELSE '-1' 
+					 END AS domingoSalida
+		FROM HORARIOS 
+ 
+
+

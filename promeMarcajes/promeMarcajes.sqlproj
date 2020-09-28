@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <Name>promeMarcajes</Name>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectVersion>4.1</ProjectVersion>
+    <ProjectGuid>{114a1be0-dba8-47c2-b38d-eab30709e900}</ProjectGuid>
+    <DSP>Microsoft.Data.Tools.Schema.Sql.Sql150DatabaseSchemaProvider</DSP>
+    <OutputType>Database</OutputType>
+    <RootPath>
+    </RootPath>
+    <RootNamespace>promeMarcajes</RootNamespace>
+    <AssemblyName>promeMarcajes</AssemblyName>
+    <ModelCollation>1033,CI</ModelCollation>
+    <DefaultFileStructure>BySchemaAndSchemaType</DefaultFileStructure>
+    <DeployToDatabase>True</DeployToDatabase>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetLanguage>CS</TargetLanguage>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <SqlServerVerification>False</SqlServerVerification>
+    <IncludeCompositeObjects>True</IncludeCompositeObjects>
+    <TargetDatabaseSet>True</TargetDatabaseSet>
+    <DefaultCollation>Traditional_Spanish_CI_AS</DefaultCollation>
+    <DefaultFilegroup>PRIMARY</DefaultFilegroup>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">11.0</VisualStudioVersion>
+    <!-- Default to the v11.0 targets path if the targets file for the current VS version is not found -->
+    <SSDTExists Condition="Exists('$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets')">True</SSDTExists>
+    <VisualStudioVersion Condition="'$(SSDTExists)' == ''">11.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Condition="'$(SQLDBExtensionsRefPath)' != ''" Project="$(SQLDBExtensionsRefPath)\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <Import Condition="'$(SQLDBExtensionsRefPath)' == ''" Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <ItemGroup>
+    <Folder Include="Properties" />
+    <Folder Include="dbo\" />
+    <Folder Include="dbo\Tables\" />
+    <Folder Include="dbo\Views\" />
+    <Folder Include="dbo\Functions\" />
+    <Folder Include="dbo\Stored Procedures\" />
+    <Folder Include="dbo\User Defined Types\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Build Include="dbo\Tables\ASIS_DIA_PERM.sql" />
+    <Build Include="dbo\Tables\CalendarioLaboral.sql" />
+    <Build Include="dbo\Tables\CalendarioLaboralClaves.sql" />
+    <Build Include="dbo\Tables\CONFIGURACION.sql" />
+    <Build Include="dbo\Tables\FALTAS.sql" />
+    <Build Include="dbo\Tables\HORARIOS.sql" />
+    <Build Include="dbo\Tables\MARCAJES.sql" />
+    <Build Include="dbo\Tables\MOT_FALS.sql" />
+    <Build Include="dbo\Tables\PERIODOS.sql" />
+    <Build Include="dbo\Tables\TEXTRA.sql" />
+    <Build Include="dbo\Tables\PERSONAL.sql" />
+    <Build Include="dbo\Views\vistaDiasDescansoPorHorario.sql" />
+    <Build Include="dbo\Views\vistaobtieneHorario.sql" />
+    <Build Include="dbo\Views\vistaQuitaAgregaTiempo.sql" />
+    <Build Include="dbo\Functions\fnObtieneTipoDiaCalendarioLaboral.sql" />
+    <Build Include="dbo\Stored Procedures\ActualizaDatosPermisoParcialPL.sql" />
+    <Build Include="dbo\Stored Procedures\paActualizaSupervisorActualSemanaEnCurso.sql" />
+    <Build Include="dbo\Stored Procedures\pa_PasarLista.sql" />
+    <Build Include="dbo\Stored Procedures\pa_PasarListaBloqueFinal.sql" />
+    <Build Include="dbo\Stored Procedures\paADPGeneraDia.sql" />
+    <Build Include="dbo\User Defined Types\PLPermisoParcial.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="FFraire.promeMarcajes.publish.publish.xml" />
+    <None Include="promeMarcajes - DatosIniciales.7z" />
+  </ItemGroup>
+</Project>

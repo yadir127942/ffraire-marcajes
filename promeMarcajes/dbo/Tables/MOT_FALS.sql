@@ -1,0 +1,27 @@
+﻿CREATE TABLE [dbo].[MOT_FALS] (
+    [motivo]     NVARCHAR (3)   CONSTRAINT [DF_MOT_FALS_motivo] DEFAULT ('') NOT NULL,
+    [des_falta]  NVARCHAR (25)  CONSTRAINT [DF_MOT_FALS_des_falta] DEFAULT ('') NOT NULL,
+    [semana]     INT            CONSTRAINT [DF_MOT_FALS_semana] DEFAULT ((0)) NOT NULL,
+    [n_sem]      INT            CONSTRAINT [DF_MOT_FALS_n_sem] DEFAULT ((0)) NOT NULL,
+    [decena]     INT            CONSTRAINT [DF_MOT_FALS_decena] DEFAULT ((0)) NOT NULL,
+    [n_dec]      INT            CONSTRAINT [DF_MOT_FALS_n_dec] DEFAULT ((0)) NOT NULL,
+    [quincena]   INT            CONSTRAINT [DF_MOT_FALS_quincena] DEFAULT ((0)) NOT NULL,
+    [n_qna]      INT            CONSTRAINT [DF_MOT_FALS_n_qna] DEFAULT ((0)) NOT NULL,
+    [mes]        INT            CONSTRAINT [DF_MOT_FALS_mes] DEFAULT ((0)) NOT NULL,
+    [n_mes]      INT            CONSTRAINT [DF_MOT_FALS_n_mes] DEFAULT ((0)) NOT NULL,
+    [bimestre]   INT            CONSTRAINT [DF_MOT_FALS_bimestre] DEFAULT ((0)) NOT NULL,
+    [n_bim]      INT            CONSTRAINT [DF_MOT_FALS_n_bim] DEFAULT ((0)) NOT NULL,
+    [mes_cierre] INT            CONSTRAINT [DF_MOT_FALS_mes_cierre] DEFAULT ((0)) NOT NULL,
+    [n_cie]      INT            CONSTRAINT [DF_MOT_FALS_n_cie] DEFAULT ((0)) NOT NULL,
+    [anio]       INT            CONSTRAINT [DF_MOT_FALS_anio] DEFAULT ((0)) NOT NULL,
+    [n_ani]      INT            CONSTRAINT [DF_MOT_FALS_n_ani] DEFAULT ((0)) NOT NULL,
+    [periodos]   INT            CONSTRAINT [DF_MOT_FALS_periodos] DEFAULT ((0)) NOT NULL,
+    [n_per]      INT            CONSTRAINT [DF_MOT_FALS_n_per] DEFAULT ((0)) NOT NULL,
+    [impdia_gdo] NUMERIC (7, 2) CONSTRAINT [DF_MOT_FALS_impdia_gdo] DEFAULT ((0)) NOT NULL,
+    [impdia_tur] NUMERIC (7, 2) CONSTRAINT [DF_MOT_FALS_impdia_tur] DEFAULT ((0)) NOT NULL,
+    [impdia_cer] NUMERIC (7, 2) CONSTRAINT [DF_MOT_FALS_impdia_cer] DEFAULT ((0)) NOT NULL,
+    [dias_gdo]   INT            CONSTRAINT [DF_MOT_FALS_dias_gdo] DEFAULT ((0)) NOT NULL,
+    [dias_tur]   INT            CONSTRAINT [DF_MOT_FALS_dias_tur] DEFAULT ((0)) NOT NULL,
+    [dias_cer]   INT            CONSTRAINT [DF_MOT_FALS_dias_cer] DEFAULT ((0)) NOT NULL
+);
+
